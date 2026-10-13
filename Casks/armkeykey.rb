@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 cask "armkeykey" do
-  version "0.8.1,16"
-  sha256 "2a1a10c71ffcda40fea74145a57124c96989b8dcefba6e746fc93af9f7b56998"
+  version "0.9.0,17"
+  sha256 "4fca0a8eda116d39d3c52a6d6a4b578b6358d5b004d3d0ae18b330837964f2bf"
 
   url "https://github.com/jr-everstar/ArmKeyKey/releases/download/v#{version.csv.first}-build#{version.csv.second}/ArmKeyKey-#{version.csv.first}-build#{version.csv.second}-mac-arm64.pkg"
   name "ArmKeyKey"
-  desc "Cangjie, Quick and Cantonese input method for Apple Silicon"
+  desc "Cangjie, Quick, Cantonese and Zhuyin input method"
   homepage "https://jr-everstar.github.io/ArmKeyKey/"
 
   livecheck do
