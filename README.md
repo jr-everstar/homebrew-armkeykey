@@ -8,7 +8,7 @@ brew install --cask jr-everstar/armkeykey/armkeykey
 
 適用於 Apple Silicon、macOS 26 或以上。Homebrew 會自動加入呢個 tap，下載原專案已簽署及公證嘅 PKG；安裝需要管理員密碼。
 
-安裝或升級前，請儲存工作、切換至其他輸入來源，並關閉所有登入帳戶嘅 ArmKeyKey。如有 `~/Library/Input Methods/ArmKeyKey.app` 個人安裝，請先移走舊 App，保留學習資料。完成後請自行登出再登入，並喺鍵盤設定加入 ArmKeyKey。
+安裝或升級前，請儲存工作、切換至其他輸入來源，並關閉所有登入帳戶嘅 ArmKeyKey。0.8.1（build 16）會自動將舊個人版 App 移至 `~/Library/ArmKeyKey Installer Backup.*`，保留學習資料及設定；安裝程式不會強制終止輸入法。完成後請自行登出再登入，並喺鍵盤設定加入 ArmKeyKey。
 
 ## 升級
 

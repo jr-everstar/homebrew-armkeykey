@@ -1,6 +1,6 @@
 cask "armkeykey" do
-  version "0.8.0,15"
-  sha256 "4e21ac7859fe62ee4f50b430b209656dde159d70dff21bf7f8712ad0aedb50aa"
+  version "0.8.1,16"
+  sha256 "2a1a10c71ffcda40fea74145a57124c96989b8dcefba6e746fc93af9f7b56998"
 
   url "https://github.com/jr-everstar/ArmKeyKey/releases/download/v#{version.csv.first}-build#{version.csv.second}/ArmKeyKey-#{version.csv.first}-build#{version.csv.second}-mac-arm64.pkg"
   name "ArmKeyKey"
@@ -35,8 +35,9 @@ cask "armkeykey" do
     <<~EOS
       Save your work, switch to another input source and quit ArmKeyKey in all
       logged-in accounts before installing, upgrading or uninstalling.
-      Move any personal copy out of ~/Library/Input Methods first; keep your
-      learning data. Installation requires administrator authorization.
+      The installer backs up personal copies to ~/Library/ArmKeyKey Installer
+      Backup.* and preserves learning data and settings. It does not force-quit
+      the input method. Installation requires administrator authorization.
       After installation, log out and back in manually, then add ArmKeyKey
       under System Settings > Keyboard > Text Input > Chinese, Traditional.
       Before uninstalling, also remove ArmKeyKey from your input sources.
