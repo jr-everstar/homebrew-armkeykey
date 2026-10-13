@@ -33,10 +33,10 @@ brew uninstall --cask jr-everstar/armkeykey/armkeykey
 
 ```sh
 brew tap --custom-remote jr-everstar/armkeykey https://github.com/jr-everstar/homebrew-armkeykey.git
-brew update
+brew update-reset "$(brew --repository jr-everstar/armkeykey)"
 ```
 
-毋須重新安裝 App。
+呢個步驟會重設此 tap 嘅本機 Git 檔案至新 repo；如有自行修改 cask，請先備份。App 同學習資料不受影響，毋須重新安裝。
 
 ## 維護
 
