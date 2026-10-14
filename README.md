@@ -8,9 +8,9 @@ brew install --cask jr-everstar/armkeykey/armkeykey
 
 適用於 Apple Silicon、macOS 26 或以上。Homebrew 會自動加入呢個 tap，下載原專案已簽署及公證嘅 PKG；安裝需要管理員密碼。
 
-安裝或升級前，請儲存工作、切換至其他輸入來源，背景程序重新啟動不會阻擋安裝。0.9.1（build 18）會自動將舊個人版 App 移至 `~/Library/ArmKeyKey Installer Backup.*`，保留學習資料及設定；安裝程式不會強制終止輸入法。共用 App 會備份至 `/Library/ArmKeyKey Installer Backup.*`，再由 PackageKit 原子替換。完成後所有使用者需自行登出再登入，並喺鍵盤設定加入 ArmKeyKey。
+安裝或升級前，請儲存工作、切換至其他輸入來源，背景程序重新啟動不會阻擋安裝。0.9.2（build 20）會自動將舊個人版 App 移至 `~/Library/ArmKeyKey Installer Backup.*`，保留學習資料及設定；安裝程式不會強制終止輸入法。共用 App 會備份至 `/Library/ArmKeyKey Installer Backup.*`，再由 PackageKit 原子替換。完成後所有使用者需自行登出再登入。首次安裝會自動開啟鍵盤設定及一次性歡迎指引：文字輸入 → 編輯 → ＋ → 中文（繁體）→ ArmKeyKey → 加入，再從輸入選單選擇 ArmKeyKey。一般升級不會重複顯示，已啟用或看過指引的帳戶會略過。
 
-目前版本為 **0.9.1（build 18）**，提供倉頡三代、Jackchows 五代補完香港版、速成、粵拼、傳統注音及智慧注音。智慧注音支援整句組字、句中改字及本機記住選詞。
+目前版本為 **0.9.2（build 20）**，提供倉頡三代、Jackchows 五代補完香港版、速成、粵拼、傳統注音及智慧注音。智慧注音支援整句組字、句中改字及本機記住選詞。繁簡及全／半形快捷鍵會即時顯示右上角狀態，毋須系統通知權限。
 
 ## 升級
 
@@ -27,7 +27,7 @@ brew upgrade --cask --greedy jr-everstar/armkeykey/armkeykey
 brew uninstall --cask jr-everstar/armkeykey/armkeykey
 ```
 
-學習資料及個人設定會保留。
+首次登入指引的 LaunchAgent 及安裝狀態目錄會一併清理；學習資料、個人設定及安裝備份會保留。
 
 ## 舊 tap 遷移
 

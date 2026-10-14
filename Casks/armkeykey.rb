@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "armkeykey" do
-  version "0.9.1,18"
-  sha256 "57f12fc8e52a4769182aa06cb24d07f1a741adedc544adf27a798c53ec221b54"
+  version "0.9.2,20"
+  sha256 "eb4fcf84be03e30989dccdbd0f879f76743b2b1f7eb0f1efe82585c4325f3dc0"
 
   url "https://github.com/jr-everstar/ArmKeyKey/releases/download/v#{version.csv.first}-build#{version.csv.second}/ArmKeyKey-#{version.csv.first}-build#{version.csv.second}-mac-arm64.pkg"
   name "ArmKeyKey"
@@ -30,7 +30,12 @@ cask "armkeykey" do
 
   pkg "ArmKeyKey-#{version.csv.first}-build#{version.csv.second}-mac-arm64.pkg"
 
-  uninstall pkgutil: "everstar.armkeykey.mac.pkg"
+  uninstall launchctl: "everstar.armkeykey.first-login",
+            pkgutil:   "everstar.armkeykey.mac.pkg",
+            delete:    [
+              "/Library/ArmKeyKey Setup",
+              "/Library/LaunchAgents/everstar.armkeykey.first-login.plist",
+            ]
 
   caveats do
     logout
@@ -42,8 +47,11 @@ cask "armkeykey" do
       Backup.* and preserves learning data and settings. It does not force-quit
       the input method. Installation requires administrator authorization.
       The shared App is backed up to /Library/ArmKeyKey Installer Backup.*.
-      After installation, all users must log out and back in, then add ArmKeyKey
-      under System Settings > Keyboard > Text Input > Chinese, Traditional.
+      After installation, all users must log out and back in. First-time PKG
+      installs open Keyboard Settings and a one-time guide to add ArmKeyKey:
+      Text Input > Edit > + > Chinese, Traditional > ArmKeyKey > Add.
+      Then select ArmKeyKey from the input menu. Ordinary upgrades skip this
+      guide. Uninstall also removes the setup login agent, keeping user data.
       Before uninstalling, also remove ArmKeyKey from your input sources.
     EOS
   end
