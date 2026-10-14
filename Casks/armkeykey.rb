@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "armkeykey" do
-  version "0.10.0,21"
-  sha256 "ad2785ab5b629defb4c9b0e924cddb1a9c25f2af6886714db30df3c11bb803fa"
+  version "0.10.1,22"
+  sha256 "81a1e0840730d8f730c8bb797145d02dafaad843d4b6c5ccf656291875bcb450"
 
   url "https://github.com/jr-everstar/ArmKeyKey/releases/download/v#{version.csv.first}-build#{version.csv.second}/ArmKeyKey-#{version.csv.first}-build#{version.csv.second}-mac-arm64.pkg"
   name "ArmKeyKey"
